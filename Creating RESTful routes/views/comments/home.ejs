@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Comments</h1>
+    <a href="/comments/new">new comment</a>
+    <!-- <p>lorem</p> -->
+    
+    <!-- <%for(let comment of comments){%>
+        <div>
+            <h3> <%=comment.username%> </h3>
+            <br>
+            <p> <%= comment.comment%></p>
+        </div>
+    <%}%> -->
+
+    <%for(let comment of comments){%>
+        <ul>
+            <li> <%=comment.comment%> - <b><%=comment.username%></b>  
+                <a href="/comments/<%= comment.id%>">details</a> 
+                
+            </li>
+        </ul>
+    <%}%>
+
+</body>
+</html>
